@@ -16,7 +16,9 @@
 
 #if !defined(__native_client__)
 
+#if (defined(__GNUC__)  || defined(__GCCXML__)) && !defined(__WIN32__)
 #include <netdb.h>
+#endif
 
 #if CRABNET_SUPPORT_IPV6==1
 
@@ -65,9 +67,6 @@ void GetMyIP_Windows_Linux_IPV4And6( SystemAddress addresses[MAXIMUM_NUMBER_OF_I
 
 #else
 
-#if (defined(__GNUC__)  || defined(__GCCXML__)) && !defined(__WIN32__)
-#include <netdb.h>
-#endif
 void GetMyIP_Windows_Linux_IPV4( SystemAddress addresses[MAXIMUM_NUMBER_OF_INTERNAL_IDS] )
 {
 

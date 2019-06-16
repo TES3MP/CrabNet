@@ -552,9 +552,9 @@ namespace RakNet
         udpForwarder->threadRunning--;
 
 #if (defined(_WIN32_WCE) || defined(_WIN32))
-		return 0;
+        return 0;
 #else
-		return nullptr;
+        return nullptr;
 #endif
     }
 } // namespace RakNet

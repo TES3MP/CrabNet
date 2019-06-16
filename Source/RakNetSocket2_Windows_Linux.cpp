@@ -16,7 +16,9 @@
 
 #if !defined(__native_client__)
 
+#if (defined(__GNUC__)  || defined(__GCCXML__)) && !defined(__WIN32__)
 #include <netdb.h>
+#endif
 
 #if CRABNET_SUPPORT_IPV6==1
 

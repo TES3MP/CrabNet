@@ -22,7 +22,7 @@
 #include "TCPInterface.h"
 #ifdef _WIN32
 typedef int socklen_t;
-#include "WSAStartupSingleton.h"
+#include "../WSAStartupSingleton.h"
 #else
 #include <sys/time.h>
 #include <unistd.h>
